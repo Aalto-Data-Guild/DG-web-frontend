@@ -1,28 +1,18 @@
-const Newselement = ({ name, date, type, id }) => {
-  const icon = (x) => {
-    switch (x) {
-      case "NEWSLETTER": {
-        return "./news.svg";
-      }
-      case "IE": {
-        return "./IE_Logo.svg";
-      }
-      case "DGCC": {
-        return "./DGCC_Logo.svg";
-      }
-      default: {
-        return "./news.svg";
-      }
-    }
-  };
+const Newselement = ({ name, date, icon, id }) => {
+  const style = { "list-style": "none" };
+
   return (
     <div>
       <ul>
-        <li key={id * 10 + 1}>
-          <img alt="news element icon" src={icon(type)} />
+        <li key={id * 10 + 1} style={style}>
+          <img alt="news element icon" src={icon} />
         </li>
-        <li key={id * 10 + 2}>{name}</li>
-        <li key={id * 10 + 3}>{date}</li>
+        <li key={id * 10 + 2} style={style}>
+          {name}
+        </li>
+        <li key={id * 10 + 3} style={style}>
+          {date}
+        </li>
       </ul>
     </div>
   );
