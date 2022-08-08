@@ -49,7 +49,6 @@ const news = [
 const Newsbar = () => {
   const [page, setPage] = useState(0);
   const numPages = Math.ceil(news.length / 4);
-  console.log(numPages);
 
   const nextPage = (event) => {
     event.preventDefault();
@@ -61,10 +60,12 @@ const Newsbar = () => {
     setPage(page - 1 < 0 ? page : page - 1);
   };
 
+  // TODO: Fix key attribute generation
+
   return (
     <div className="newsbox">
       <ul className="newsbar">
-        <li>
+        <li key={-1}>
           <button onClick={prevPage}> Previous </button>
         </li>
         {news.slice(page * 4, page * 4 + 4).map((piece) => (
@@ -77,7 +78,7 @@ const Newsbar = () => {
             />
           </li>
         ))}
-        <li>
+        <li key={-2}>
           <button onClick={nextPage}> Next</button>
         </li>
       </ul>

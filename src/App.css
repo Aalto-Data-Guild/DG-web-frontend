@@ -7,7 +7,6 @@
 	line-height: 1.6;
 }
 
-
 /*HEADER*/
 
 header {
@@ -60,9 +59,16 @@ header ul li a.active {
 	margin-left: 70px;
 }
 
+/*----------------*/
 
+/* Container for everything except the header */
+.cont {
+    display: flex;
+    flex-direction: column;
+}
 
-/*SUB-HEADER*/
+/* WELCOME PART */
+
 .welcome {
     display: flex;
     flex-direction: column;
@@ -115,25 +121,6 @@ header ul li a.active {
 	cursor: pointer;
 }
 
-
-.sidetext {
-	padding-left: 10%;
-	margin-bottom: 40px;
-	width: 65%;
-
-	display: flex;
-	flex-direction: column;
-	justify-content:center;
-	align-items: flex-start;
-}
-
-.subheader {
-	font-weight: bold;
-	font-size: 30px;
-	color: #3d3d3d;
-	margin-bottom: 7px;
-}
-
 #logo {
 	display: grid;
 	justify-content: center;
@@ -163,11 +150,31 @@ header ul li a.active {
 	z-index: 1;
 }
 
-/*-------------------- ANIMATIONS --------------------*/
+/* PARAGRAPH CLASSES */
 
-@keyframes Rotation {
-	0% {transform: rotate(0deg);}
-	100% {transform: rotate(360deg);}
+/* Whole paragraph container */
+.sidetext {
+	padding-left: 10%;
+	margin-bottom: 40px;
+	width: 65%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: flex-start;
+}
+
+/* Paragraph header  */
+.subheader {
+	font-weight: bold;
+	font-size: 30px;
+	color: #3d3d3d;
+	margin-bottom: 7px;
+}
+
+/* Paragraph contents */
+.text {
+    width: 100%;
 }
 
 /*------------------- NEWSBAR -------------------*/
@@ -190,6 +197,7 @@ header ul li a.active {
     list-style: none;
 }
 
+/* Classes for the dots below the bar */
 .dotbox {
     display:flex;
 }
@@ -211,11 +219,10 @@ header ul li a.active {
 
 }
 
-.text {
-    width: 100%;
+/*-------------------- ANIMATIONS --------------------*/
+
+@keyframes Rotation {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
 }
 
-.cont {
-    display: flex;
-    flex-direction: column;
-}
