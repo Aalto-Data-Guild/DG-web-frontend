@@ -1,38 +1,228 @@
-.App {
-  text-align: center;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
+	line-height: 1.6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*HEADER*/
+
+header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	z-index: 99;
+
+	height: 75px;
+	background: #3D3D3D;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-right: 70px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header ul li {
+	list-style: none;
+	margin-left: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+header ul li a {
+	text-decoration: none;
+	padding: 6px 15px;
+	color: #fff;
+	border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header ul li a:hover,
+header ul li a.active {
+	background: #fff;
+	color: #3d3d3d;
 }
+
+
+#small_logo {
+	height: 60px;
+
+	margin-top: 7px;
+	margin-left: 70px;
+}
+
+/*----------------*/
+
+/* Container for everything except the header */
+.cont {
+    display: flex;
+    flex-direction: column;
+}
+
+/* WELCOME PART */
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcomepart {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top:50px;
+    position: relative;
+    flex-wrap: nowrap;
+    left: 0;
+}
+
+.welcomepar { 
+	padding-left: 10%;
+	width: 50%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: flex-start;
+}
+
+.welcomepar.subheader {
+	font-weight: bold;
+	font-size: 30px;
+	color: #3d3d3d;
+}
+
+#button {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	padding-bottom:10px;
+}
+
+#moreinfo {
+	text-decoration: none;
+	padding: 6px 15px;
+	border-radius: 20px;
+	color: #3d3d3d;
+	background: #fff;
+}
+
+#moreinfo:hover,
+#moreinfo.active {
+	cursor: pointer;
+}
+
+#logo {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10%;
+}
+
+#matrix {
+	height: 400px;
+
+	grid-column: 1;
+	grid-row: 1;
+
+	z-index: 98;
+}
+
+#cog {
+	height: 370px;
+
+	grid-column: 1;
+	grid-row: 1;
+
+	margin-top: 15px;
+
+	animation: Rotation 30s linear 0s infinite;
+
+	z-index: 1;
+}
+
+/* PARAGRAPH CLASSES */
+
+/* Whole paragraph container */
+.sidetext {
+	padding-left: 10%;
+	margin-bottom: 40px;
+	width: 65%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: flex-start;
+}
+
+/* Paragraph header  */
+.subheader {
+	font-weight: bold;
+	font-size: 30px;
+	color: #3d3d3d;
+	margin-bottom: 7px;
+}
+
+/* Paragraph contents */
+.text {
+    width: 100%;
+}
+
+/*------------------- NEWSBAR -------------------*/
+.newsbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.newsbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap:nowrap;
+	align-items: center;
+	align-self: stretch;
+}
+
+.newsbar li {
+    list-style: none;
+}
+
+/* Classes for the dots below the bar */
+.dotbox {
+    display:flex;
+}
+
+.circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background: #c9c9c9;
+    margin-right: 3px;
+
+}
+.activecircle {
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background: #000000;
+    margin-right: 3px;
+
+}
+
+/*-------------------- ANIMATIONS --------------------*/
+
+@keyframes Rotation {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
